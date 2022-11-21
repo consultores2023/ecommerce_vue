@@ -18,64 +18,44 @@
             <a href="#"> <img src="assets/logo.png" class="logo" alt=""> </a>
             <div>
                 <ul id="navbar">
-                    <li><a class="active" href="index.html">Home</a></li>
+                    <li v-for="navbarItem in navbarItems">
+                        <a href="#">{{navbarItem.label}}</a>
+                    </li>
+
+                    <!-- <li><a class="active" href="index.html">Home</a></li>
                     <li><a href="shop.html">Shop</a></li>
                     <li><a href="blog.html">About</a></li>
                     <li><a href="about.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="cart.html"><i class="fa-light fa-bag-shopping"></i></a></li>
+                    <li><a href="cart.html"><i class="fa-light fa-bag-shopping"></i></a></li> -->
                 </ul>
             </div>
         </section>
 
         <section id="hero">
-            <h4>Trade-in-offer</h4>
-            <h2>Super Value deals</h2>
-            <h1>On all product</h1>
-            <p>Save mor with coupons </p>
-            <button>Shop Now</button>
+            <h4>{{heroItems[0]}}</h4>
+            <h2>{{heroItems[1]}}</h2>
+            <h1>{{heroItems[2]}}</h1>
+            <p>{{heroItems[3]}} </p>
+            <button>{{heroItems[4]}}</button>
         </section>
 
         <section id="feature" class="section-p1">
-            <div class="fe-box">
-                <img src="img/features/f1.png" alt="" srcset="">
-                <h6>Envio Gratuito</h6>
+            <div v-for="feature in featureItems" class="fe-box">
+                <img v-bind:src="feature.href" class="card-img-top" alt="...">
+                <h6>{{feature.label}}</h6>
             </div>
-            <div class="fe-box">
-                <img src="img/features/f2.png" alt="" srcset="">
-                <h6>Orden Online</h6>
-            </div>
-            <div class="fe-box">
-                <img src="img/features/f3.png" alt="" srcset="">
-                <h6>Ahorra Dinero</h6>
-            </div>
-            <div class="fe-box">
-                <img src="img/features/f4.png" alt="" srcset="">
-                <h6>Promotions</h6>
-            </div>
-            <div class="fe-box">
-                <img src="img/features/f5.png" alt="" srcset="">
-                <h6>Happy Sell</h6>
-            </div>
-            <div class="fe-box">
-                <img src="img/features/f6.png" alt="" srcset="">
-                <h6>24/7 Support</h6>
-            </div>
-            <div class="fe-box">
-                <img src="img/features/f6.png" alt="" srcset="">
-                <h6>Yoselin Grilli</h6>
-            </div> 
         </section>
 
         <section id="product1" class="section-p1">
             <h2>Featured Products</h2>
             <p>Summer Collection New Morden Design</p>
             <div class="pro-container">
-                <div class="pro">
-                    <img src="img/products/f1.jpg" alt="">
+                <div v-for="productItem in productItems" class="pro">
+                    <img v-bind:src="productItem.href" alt="">
                     <div class="des">
-                        <span> adidas</span>
-                        <h5> Cartoon Astronaut T-shirt</h5>
+                        <span>{{productItem.brand}}</span>
+                        <h5> {{productItem.name}}</h5>
                         <div class="star">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -83,119 +63,7 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <h4>$78</h4>
-                    </div>
-                    <a href=""><i class="fal fa-shopping-cart cart"></i></a>
-                </div>
-                <div class="pro">
-                    <img src="img/products/f2.jpg" alt="">
-                    <div class="des">
-                        <span> adidas</span>
-                        <h5> Cartoon Astronaut T-shirt</h5>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>$78</h4>
-                    </div>
-                    <a href=""><i class="fal fa-shopping-cart cart"></i></a>
-                </div>
-                <div class="pro">
-                    <img src="img/products/f3.jpg" alt="">
-                    <div class="des">
-                        <span> adidas</span>
-                        <h5> Cartoon Astronaut T-shirt</h5>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>$78</h4>
-                    </div>
-                    <a href=""><i class="fal fa-shopping-cart cart"></i></a>
-                </div>
-                <div class="pro">
-                    <img src="img/products/f4.jpg" alt="">
-                    <div class="des">
-                        <span> adidas</span>
-                        <h5> Cartoon Astronaut T-shirt</h5>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>$78</h4>
-                    </div>
-                    <a href=""><i class="fal fa-shopping-cart cart"></i></a>
-                </div>
-                <div class="pro">
-                    <img src="img/products/f5.jpg" alt="">
-                    <div class="des">
-                        <span> adidas</span>
-                        <h5> Cartoon Astronaut T-shirt</h5>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>$78</h4>
-                    </div>
-                    <a href=""><i class="fal fa-shopping-cart cart"></i></a>
-                </div>
-                <div class="pro">
-                    <img src="img/products/f6.jpg" alt="">
-                    <div class="des">
-                        <span> adidas</span>
-                        <h5> Cartoon Astronaut T-shirt</h5>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>$78</h4>
-                    </div>
-                    <a href=""><i class="fal fa-shopping-cart cart"></i></a>
-                </div>
-                <div class="pro">
-                    <img src="img/products/f7.jpg" alt="">
-                    <div class="des">
-                        <span> adidas</span>
-                        <h5> Cartoon Astronaut T-shirt</h5>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>$78</h4>
-                    </div>
-                    <a href=""><i class="fal fa-shopping-cart cart"></i></a>
-                </div>
-                <div class="pro">
-                    <img src="img/products/f8.jpg" alt="">
-                    <div class="des">
-                        <span> adidas</span>
-                        <h5> Cartoon Astronaut T-shirt</h5>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>$78</h4>
+                        <h4>{{productItem.price}}</h4>
                     </div>
                     <a href=""><i class="fal fa-shopping-cart cart"></i></a>
                 </div>
@@ -373,7 +241,7 @@
             </div>
         </section>
 
-        <!-- <div class="section-p1">
+        <div class="section-p1">
             <h1>{{ bienvenida }}</h1>
             <div class="card" style="width: 18rem;">
                 <img v-bind:src="carta.imagen" class="card-img-top" alt="...">
@@ -389,11 +257,13 @@
                 <input type="text" name="nombre" v-model="nombre">
             </label>
             <p>Nombre: {{mostrarNombre}}</p>
-        </div> -->
-    <div class="center" id="center">
-        <button v-on:click="restar()" type="button" class="btn-danger">Menos</button>
-        <label for="count" id="counting"> 0 </label>
-        <button @click="sumar()" type="button" class="btn-success">Más</button>
+        </div>
+
+    <div class="section-p1" id="product1">
+        <button v-on:click="restar()" type="button">Menos</button>
+        <!-- <label for="count" id="counting"> 0 </label> -->
+        <input type="text" v-model="contador" readonly/>
+        <button @click="sumar()" type="button">Más</button>
     </div>
 
     </div>
