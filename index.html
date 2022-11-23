@@ -15,19 +15,11 @@
 <body>
     <div id="app">
         <section id="app">
-            <header class="encabezado">
-                <h1> </h1>
-                <p>Bienvenido/a: {{usuario}} </p>
-                <button v-if="usuario!=''">Log out</button>
-                <button v-if="usuario==''">Login</button>
-                <button v-on:click="hidden()" type="button"> abc </button>
-                <p v-if="showHidden"> Este texto puede estar y no estar al hacer click </p>
-            </header>
-            <main class="principal">
+            <!-- <main class="principal">
                 <article>
                     <img src="img/hero4.png" alt="">
                 </article>
-            </main>
+            </main> -->
         </section>
 
         <section id="header">
@@ -274,6 +266,15 @@
             <input type="text" v-model="contador" readonly/>
             <button @click="sumar()" type="button">Más</button>
         </div>
+
+        <header class="encabezado">
+            <h1> </h1>
+            <p>Bienvenido/a: {{usuario}} </p>
+            <button v-if="usuario!=''">Log out</button>
+            <button v-if="usuario==''">Login</button>
+            <button v-on:click="hidden()" type="button"> abc </button>
+            <p v-if="showHidden"> Este texto puede estar y no estar al hacer click </p>
+        </header>
 
     </div>
     <!-- JavaScript Bundle with Popper -->
