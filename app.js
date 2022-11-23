@@ -35,18 +35,19 @@ var app = new Vue({
             { brand: "adidas", name: "Cartoon Astronaut T-shirt", price: "$78", href: "img/products/f5.jpg" },
             { brand: "adidas", name: "Cartoon Astronaut T-shirt", price: "$78", href: "img/products/f6.jpg" },
             { brand: "adidas", name: "Cartoon Astronaut T-shirt", price: "$78", href: "img/products/f7.jpg" },
-            {brand: "adidas", name: "Cartoon Astronaut T-shirt", price:"$78", href: "img/products/f8.jpg"}]
+            { brand: "adidas", name: "Cartoon Astronaut T-shirt", price: "$78", href: "img/products/f8.jpg" }],
+        usuario: "",
+        logged: true,
+        showHidden: true,
+        esMayor:false
     
     },
-    
     methods: {
         sumar() {
             app.contador = app.contador + 1
-            document.getElementById('counting').innerHTML = app.contador;
-        },
+            },
         restar() {
-            app.contador = app.contador - 1
-            document.getElementById('counting').innerHTML = app.contador;
+            app.contador = app.contador - 1            
         },
         mostrarPrecio(){
             alert(`Este hermoso ${this.carta.titulo} sale ${this.carta.precio}`)
@@ -57,6 +58,13 @@ var app = new Vue({
         },
         returnValue() {
             return this.contador
+        },
+        hidden() {
+            if (this.showHidden){
+            this.showHidden = false
+            } else {
+                this.showHidden = true
+            }
         }
     },
     computed:{

@@ -14,6 +14,22 @@
 </head>
 <body>
     <div id="app">
+        <section id="app">
+            <header class="encabezado">
+                <h1> </h1>
+                <p>Bienvenido/a: {{usuario}} </p>
+                <button v-if="usuario!=''">Log out</button>
+                <button v-if="usuario==''">Login</button>
+                <button v-on:click="hidden()" type="button"> abc </button>
+                <p v-if="showHidden"> Este texto puede estar y no estar al hacer click </p>
+            </header>
+            <main class="principal">
+                <article>
+                    <img src="img/hero4.png" alt="">
+                </article>
+            </main>
+        </section>
+
         <section id="header">
             <a href="#"> <img src="assets/logo.png" class="logo" alt=""> </a>
             <div>
@@ -21,13 +37,6 @@
                     <li v-for="navbarItem in navbarItems">
                         <a href="#">{{navbarItem.label}}</a>
                     </li>
-
-                    <!-- <li><a class="active" href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="blog.html">About</a></li>
-                    <li><a href="about.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="cart.html"><i class="fa-light fa-bag-shopping"></i></a></li> -->
                 </ul>
             </div>
         </section>
@@ -259,12 +268,12 @@
             <p>Nombre: {{mostrarNombre}}</p>
         </div>
 
-    <div class="section-p1" id="product1">
-        <button v-on:click="restar()" type="button">Menos</button>
-        <!-- <label for="count" id="counting"> 0 </label> -->
-        <input type="text" v-model="contador" readonly/>
-        <button @click="sumar()" type="button">Más</button>
-    </div>
+        <div class="section-p1" id="product1">
+            <button v-on:click="restar()" type="button">Menos</button>
+            <!-- <label for="count" id="counting"> 0 </label> -->
+            <input type="text" v-model="contador" readonly/>
+            <button @click="sumar()" type="button">Más</button>
+        </div>
 
     </div>
     <!-- JavaScript Bundle with Popper -->
