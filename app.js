@@ -39,7 +39,9 @@ var app = new Vue({
         usuario: "",
         logged: true,
         showHidden: true,
-        esMayor:false
+        esMayor: false,
+        texto: "Mis card de productos - componentes",
+        edad: "25"
     
     },
     methods: {
