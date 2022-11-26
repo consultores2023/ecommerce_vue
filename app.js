@@ -41,7 +41,16 @@ var app = new Vue({
         showHidden: true,
         esMayor: false,
         texto: "Mis card de productos - componentes",
-        edad: "25"
+        edad: "25",
+        estilo1: { fontSize: '10px',  'flex-direction': 'row', 'margin': '10px'},
+        estilo2: { fontSize: '10px', 'flex-direction': 'row', 'margin': '10px' },
+        estilo3: { fontSize: '15px',  'flex-direction': 'row', 'margin': '10px'},
+        estilo4: { color: 'red'},
+        estilo5: { color: '#6DF743' },
+        estilo6: { color: '#00B9AE' },
+        estilo7: { 'background-color': '#02C3BD' },
+        estilo8: { 'background-color': '#037171' },
+        estilo9: { 'background-color': '#03312E' },
     
     },
     methods: {
