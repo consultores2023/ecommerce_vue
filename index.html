@@ -259,21 +259,23 @@
             <p>Nombre: {{mostrarNombre}}</p>
         </div>
         
+        
         <div class="section-p1">
+            <prueba-componente :texto1="texto" :edadTomi="edad"></prueba-componente>
+            <prueba-componente texto1="Hola Chicos" :edadTomi="edad"></prueba-componente>
+        </div>
+        
+        <!-- <div>
+            <componente-card v-for="(producto, index) of productItems" :key="index" :name="producto.name" :brand="producto.brand" :price="producto.price" :href="producto.href"></componente-card>
+        </div> -->
+        
+        <div class="section-p1">
+            <h2>ACTIVIDAD EVALUADA 1</h2>
             <button v-on:click="restar()" type="button">Menos</button>
             <!-- <label for="count" id="counting"> 0 </label> -->
             <input type="text" v-model="contador" readonly/>
             <button @click="sumar()" type="button">Más</button>
         </div>
-
-        <div class="section-p1">
-            <prueba-componente :texto1="texto" :edadTomi="edad"></prueba-componente>
-            <prueba-componente texto1="Hola Chicos" :edadTomi="edad"></prueba-componente>
-        </div>
-
-        <!-- <div>
-            <componente-card v-for="(producto, index) of productItems" :key="index" :name="producto.name" :brand="producto.brand" :price="producto.price" :href="producto.href"></componente-card>
-        </div> -->
         
         <section>
             <h2>ACTIVIDAD EVALUADA 2</h2>
