@@ -2,7 +2,7 @@ const table = Vue.component('componente-table', {
     props: {
         objetos: Array,
         th_color: Object,
-        background_color: String
+        background_color: Object
     },
     data: {
         keys: [],
@@ -27,7 +27,6 @@ const table = Vue.component('componente-table', {
                 </thead>
                 <tbody>
                     <tr v-for="objeto in objetos">
-
                         <td v-for="k in objeto">{{k}}</td>
                     </tr>
                 </tbody>
